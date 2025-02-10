@@ -6,18 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Shuwaki Worxpace &reg;</title>
         <style>
-            h1{
-                text-align: center;
-                padding: 15px;
-                border-radius: 20px;
-            }
-            body {
+           body {
                 font-family: Arial, sans-serif;
                 background-color: #f0f0f0;
                 margin: 2%;
                 padding: 0;
             }
             .sidebar {
+                display: flex;
                 float: left;
                 min-width: 20%;
                 padding: 15px;
@@ -25,27 +21,96 @@
                 border-radius: 20px;
             }
             .main-content{
-                float: left;
-                width: 70%;
+                margin-top: 40px;
+                width: 93%;
                 padding: 15px;
                 background-color: #b8c6e0;
                 border-radius: 20px;
             }
+            body {
+	font: bold 11px/1.5em Verdana;
+	}
+
+h1 {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:16px;
+	font-weight:bold;
+	margin:0;
+	padding:0;
+    text-align: center;
+	}
+
+hr {
+	border:none;
+	border-top:1px solid #CCCCCC;
+	height:1px;
+	margin-bottom:25px;
+	}
+	
+#tabs {
+	float:left;
+	width:100%;
+	font-size:93%;
+	border-bottom:1px solid #2763A5;
+	line-height:normal;
+	}
+
+#tabs ul {
+	margin:0;
+	padding:10px 10px 0 50px;
+	list-style:none;
+	}
+
+#tabs li {
+	display:inline;
+	margin:0;
+	padding:0;
+	}
+
+#tabs a {
+	float:left;
+	background:url("tableft.gif") no-repeat left top;
+	margin:0;
+	padding:0 0 0 4px;
+	text-decoration:none;
+	}
+
+#tabs a span {
+	float:left;
+	display:block;
+	background:url("tabright.gif") no-repeat right top;
+	padding:5px 15px 4px 6px;
+	color:#FFF;
+	}
+
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+#tabs a span {float:none;}
+
+/* End IE5-Mac hack */
+#tabs a:hover span {
+	color:#FFF;
+	}
+
+#tabs a:hover {
+	background-position:0% -42px;
+	}
+
+#tabs a:hover span {
+	background-position:100% -42px;
+	}
         </style>
     </head>
     <body>
         <h1 class="heading">Shuwaki Worxpace</h1>
-        <aside class="sidebar">
-            <h2>Navigation</h2>
-            <nav>
+            <div id="tabs">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="features.html">Features</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="downloads.html">Downloads</a></li>
                 </ul>
-            </nav>
-        </aside>
+            </div>
         <div class="main-content">
             <h2>Welcome to Shuwaki Worxpace</h2>
             <p>Shuwaki Worxpace&reg; is a business management software developed 
