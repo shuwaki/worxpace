@@ -1,9 +1,3 @@
-<!--
-Theme Name: Line - App Landing Page 
-Author URI: http://webthemez.com/
-Description: This theme is a best responsive web template. It would be great for a corporate websites, business websites, personal blog.
-License: Free to use for personal and commercial, but you need to place back link in the bottom of the template.
--->
 <!doctype html>
 <!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
@@ -19,7 +13,7 @@ License: Free to use for personal and commercial, but you need to place back lin
     <![endif]-->
 <title>Shuwaki Worxpace&reg;</title>
 <meta name="description" content="">
-<meta name="author" content="WebThemez">
+<meta name="author" content="Shuwaki Ibra">
 <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -35,6 +29,16 @@ License: Free to use for personal and commercial, but you need to place back lin
 <link rel="stylesheet" href="css/styles.css" />
 <!-- Font Awesome -->
 <link href="font/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "4wTxU_MPMdoInxnyeY",
+      });
+   })();
+</script>
 </head>
 
 <body> 	
@@ -271,11 +275,11 @@ License: Free to use for personal and commercial, but you need to place back lin
             <div class="item"> <span class="helper"> <img src="images/clients/med-h.png" alt="client" /></span> </div>
             <div class="item"> <span class="helper"> <img src="images/clients/hibaks.png" alt="client" /></span> </div>
             <div class="item"> <span class="helper"> <img src="images/clients/annur.png" alt="client" /></span> </div>
-            <div class="item"> <span class="helper"> <img src="images/clients/client-5.png" alt="client" /></span> </div>
+            <!-- <div class="item"> <span class="helper"> <img src="images/clients/client-5.png" alt="client" /></span> </div>
             <div class="item"> <span class="helper"> <img src="images/clients/client-6.png" alt="client" /></span> </div>
             <div class="item"> <span class="helper"> <img src="images/clients/client-7.png" alt="client" /></span> </div>
             <div class="item"> <span class="helper"> <img src="images/clients/client-8.png" alt="client" /></span> </div>
-            <div class="item"> <span class="helper"> <img src="images/clients/client-9.png" alt="client" /></span> </div>
+            <div class="item"> <span class="helper"> <img src="images/clients/client-9.png" alt="client" /></span> </div> -->
           </div>
         </div>
       </div>
@@ -292,17 +296,17 @@ License: Free to use for personal and commercial, but you need to place back lin
       <div class="col-md-12">
         <div id="portfolio">
           <ul class="items list-unstyled clearfix animated fadeInRight showing" data-animation="fadeInRight" style="position: relative; height: 438px;">
-            <li class="item branding" style="position: absolute; left: 0px; top: 0px;"> <a href="images/work/1.jpg" class="fancybox"> <img src="images/work/1.jpg" alt="">
-              <div class="overlay"> <span>Etiam porta</span> </div>
+            <li class="item branding" style="position: absolute; left: 0px; top: 0px;"> <a href="images/work/shot1.png" class="fancybox"> <img src="images/work/shot1.png" alt="">
+              <div class="overlay"> <span>Admin Dashboard</span> </div>
               </a> </li>
-            <li class="item photography" style="position: absolute; left: 292px; top: 0px;"> <a href="images/work/2.jpg" class="fancybox"> <img src="images/work/2.jpg" alt="">
-              <div class="overlay"> <span>Lorem ipsum</span> </div>
+            <li class="item photography" style="position: absolute; left: 292px; top: 0px;"> <a href="images/work/shot2.png" class="fancybox"> <img src="images/work/shot2.png" alt="">
+              <div class="overlay"> <span>Point of Sale</span> </div>
               </a> </li>
-            <li class="item branding" style="position: absolute; left: 585px; top: 0px;"> <a href="images/work/3.jpg" class="fancybox"> <img src="images/work/3.jpg" alt="">
-              <div class="overlay"> <span>Vivamus quis</span> </div>
+            <li class="item branding" style="position: absolute; left: 585px; top: 0px;"> <a href="images/work/shot3.png" class="fancybox"> <img src="images/work/shot3.png" alt="">
+              <div class="overlay"> <span>Cashier</span> </div>
               </a> </li>
-            <li class="item photography" style="position: absolute; left: 877px; top: 0px;"> <a href="images/work/4.jpg" class="fancybox"> <img src="images/work/4.jpg" alt="">
-              <div class="overlay"> <span>Donec ac tellus</span> </div>
+            <li class="item photography" style="position: absolute; left: 877px; top: 0px;"> <a href="images/work/shot4.PNG" class="fancybox"> <img src="images/work/shot4.PNG" alt="">
+              <div class="overlay"> <span>Customers</span> </div>
               </a> </li>            
           </ul>
         </div>
@@ -432,6 +436,7 @@ License: Free to use for personal and commercial, but you need to place back lin
 <script src="js/jquery.fittext.js"></script> 
 <script src="js/waypoints.js"></script> 
 <script src="js/custom.js" type="text/javascript"></script> 
+<script src="js/emailjs.js" type="text/javascript"></script> 
 <script src="js/owl-carousel/owl.carousel.js"></script>
 </body>
 </html>
