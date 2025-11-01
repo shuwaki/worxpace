@@ -1,0 +1,351 @@
+<!--
+PSEUDOCODE / PLAN (detailed):
+
+1. Page wrapper
+   - Standard HTML5 document with head copied from existing site to maintain styles/scripts.
+   - Title: "Releases - Shuwaki Worxpace®"
+
+2. Navigation
+   - Reuse the existing site nav markup so the new page integrates with the site.
+
+3. Main content area: Releases listing
+   - A top heading and lead paragraph explaining the page purpose.
+   - An optional "Latest release" highlighted card.
+
+4. Release template (repeatable section element)
+   - Attributes/visuals:
+     - <section class="release" id="release-vX-Y-Z"> for anchorability
+     - Header area with Version, Codename (optional), Release Date, Status (Stable/Beta)
+     - Short summary / tagline
+     - Call-to-action buttons: Download (primary), Changelog, Assets
+   - Grid layout split into two columns:
+     - Left column: "What's New" (bullet list), "Bug fixes" (bullet list), "Upgrade Notes" (bullet list)
+     - Right column: Release metadata card:
+         - Files (APK/ZIP/Installer) with sizes and download links
+         - Checksums (SHA256)
+         - Compatibility (OS, minimum requirements)
+         - Migration / Breaking changes (short)
+         - Contributors / Authors
+         - License
+         - Support / Contact
+   - Collapsible details (optional) using CSS classes to keep template static-friendly.
+   - Include semantic markup for machine-readability:
+     - Use data attributes like data-version, data-date, data-status for each release section.
+
+5. Example releases
+   - Provide at least two example sections showing how to fill fields.
+   - Keep placeholders ({{ }}) in the template section to indicate fields to fill.
+
+6. Footer and scripts
+   - Reuse existing footer and load the same JS assets so styling/behavior is consistent.
+
+7. Accessibility and copy
+   - Use headings in order, buttons with proper aria-labels, table/list semantics for file lists.
+
+END PSEUDOCODE
+-->
+
+<!doctype html>
+<html lang="en-gb" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Releases - Shuwaki Worxpace&reg;</title>
+  <meta name="description" content="Release notes, downloads and changelogs for Shuwaki Worxpace.">
+  <meta name="author" content="Shuwaki Ibra">
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen" />
+  <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+  <link href="css/animate.css" rel="stylesheet" media="screen">
+  <link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="font/css/font-awesome.min.css" rel="stylesheet">
+  <style>
+    /* Minimal additional styles for releases page */
+    .release { padding: 40px 0; border-bottom: 1px solid #eee; }
+    .release .meta { background:#fbfbfb; padding:20px; border-radius:4px; }
+    .release .status { font-weight:700; margin-left:8px; }
+    .release .badge-status { padding:6px 10px; border-radius:4px; font-size:13px; }
+    .badge-stable { background:#28a745; color:#fff; }
+    .badge-beta { background:#ffc107; color:#212529; }
+    .asset-list li { margin-bottom:8px; }
+    .template-note { font-style:italic; color:#666; }
+    .release .small-label { font-size:12px;color:#666; }
+    .release .checksum { font-family:monospace; word-break:break-all; font-size:13px; }
+  </style>
+</head>
+<body>
+  <nav id="mainNav">
+    <div id="menuToggle"><i class="fa fa-bars"></i></div>
+    <ul class="menuLinks">
+      <li><a href="index.html" class="scroll-link">Home</a></li>
+      <li><a href="#services" class="scroll-link">Technology</a></li>
+      <li><a href="#features" class="scroll-link">Features</a></li>
+      <li><a href="releases.html" class="active">Releases</a></li>
+      <li><a href="#contactUs" class="scroll-link">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <main class="container" style="padding-top:40px;">
+    <div class="heading text-center">
+      <h1>Releases</h1>
+      <p class="lead">Download installers, read changelogs, and find upgrade instructions for Shuwaki Worxpace&reg;.</p>
+    </div>
+
+    <!-- LATEST RELEASE HIGHLIGHT -->
+    <section class="release" id="release-latest" data-version="1.3.0" data-date="2025-10-15" data-status="stable">
+      <div class="row">
+        <div class="col-md-8">
+          <h2>v1.3.0 <small class="small-label">("Zephyr")</small>
+            <span class="status">
+              <span class="badge-status badge-stable" aria-hidden="true">Stable</span>
+            </span>
+          </h2>
+          <p class="template-note">Short summary: A small description of the release, its focus and target users.</p>
+          <p>Shuwaki Worxpace v1.3.0 focuses on performance improvements, expanded reporting and a new offline sync engine.</p>
+
+          <div class="row" style="margin-top:18px;">
+            <div class="col-sm-6">
+              <h4>What's New</h4>
+              <ul>
+                <li>New offline sync engine: faster background sync and conflict resolution.</li>
+                <li>Expanded analytics with CSV export for custom reports.</li>
+                <li>Improved POS throughput under high-load scenarios.</li>
+              </ul>
+            </div>
+            <div class="col-sm-6">
+              <h4>Bug fixes</h4>
+              <ul>
+                <li>Fixed rounding bug on multi-currency invoices.</li>
+                <li>Resolved crash when opening customer history with >10k transactions.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div style="margin-top:18px;">
+            <h4>Upgrade Notes</h4>
+            <ul>
+              <li>Backup your database before upgrading from versions &lt; 1.2.0.</li>
+              <li>If you use custom plugins, verify compatibility with the new sync API.</li>
+            </ul>
+          </div>
+
+          <div style="margin-top:18px;">
+            <a class="btn btn-primary" href="#download-v1-3-0" role="button">Download</a>
+            <a class="btn btn-default" href="#changelog-v1-3-0" role="button">Changelog</a>
+          </div>
+        </div>
+
+        <aside class="col-md-4">
+          <div class="meta">
+            <h5>Release metadata</h5>
+            <p class="small-label"><strong>Version:</strong> 1.3.0</p>
+            <p class="small-label"><strong>Released:</strong> 2025-10-15</p>
+            <p class="small-label"><strong>Support:</strong> LTS (12 months)</p>
+
+            <h6 style="margin-top:12px;">Assets</h6>
+            <ul class="asset-list list-unstyled">
+              <li>
+                <a href="downloads/shuwaki-worxpace-1.3.0-windows.exe" download>shuwaki-worxpace-1.3.0-windows.exe</a>
+                <div class="small-label">Windows installer — 42 MB</div>
+              </li>
+              <li>
+                <a href="downloads/shuwaki-worxpace-1.3.0-linux.tar.gz" download>shuwaki-worxpace-1.3.0-linux.tar.gz</a>
+                <div class="small-label">Linux tarball — 38 MB</div>
+              </li>
+              <li>
+                <a href="downloads/shuwaki-worxpace-1.3.0-android.apk" download>shuwaki-worxpace-1.3.0-android.apk</a>
+                <div class="small-label">Android APK — 15 MB</div>
+              </li>
+            </ul>
+
+            <h6 style="margin-top:12px;">Checksums</h6>
+            <div class="checksum">SHA256: 3f5c...a9d2 (example)</div>
+
+            <h6 style="margin-top:12px;">Compatibility</h6>
+            <ul class="small-label">
+              <li>Windows 10 or later</li>
+              <li>Ubuntu 18.04+ / Debian 10+</li>
+              <li>Android 8.0 or later (APK)</li>
+            </ul>
+
+            <h6 style="margin-top:12px;">Contributors</h6>
+            <p class="small-label">Ibrahim Shuwaki, Team Shuwaki</p>
+
+            <h6 style="margin-top:12px;">Contact & Support</h6>
+            <p class="small-label">support@shuwaki.io — For enterprise support request include logs and DB version.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- TEMPLATE SECTION - copy this block for every release and update fields -->
+    <section class="release" id="release-template" data-version="{{VERSION}}" data-date="{{YYYY-MM-DD}}" data-status="{{stable|beta|rc}}">
+      <div class="row">
+        <div class="col-md-8">
+          <h2>v{{VERSION}} <small class="small-label">("{{CODENAME}}")</small>
+            <span class="status">
+              <span class="badge-status {{badge-class}}" aria-hidden="true">{{STATUS_LABEL}}</span>
+            </span>
+          </h2>
+          <p class="template-note">Summary: Brief one-line description of the release purpose.</p>
+          <p>{{LONG_DESCRIPTION}}</p>
+
+          <div class="row" style="margin-top:18px;">
+            <div class="col-sm-6">
+              <h4>What's New</h4>
+              <ul>
+                <li>{{FEATURE_1}}</li>
+                <li>{{FEATURE_2}}</li>
+                <li>{{FEATURE_3}}</li>
+              </ul>
+            </div>
+            <div class="col-sm-6">
+              <h4>Bug fixes</h4>
+              <ul>
+                <li>{{BUGFIX_1}}</li>
+                <li>{{BUGFIX_2}}</li>
+              </ul>
+            </div>
+          </div>
+
+          <div style="margin-top:18px;">
+            <h4>Upgrade Notes</h4>
+            <ul>
+              <li>{{UPGRADE_STEP_1}}</li>
+              <li>{{UPGRADE_STEP_2}}</li>
+            </ul>
+          </div>
+
+          <div style="margin-top:18px;">
+            <a class="btn btn-primary" href="{{DOWNLOAD_URL}}" role="button">Download</a>
+            <a class="btn btn-default" href="{{CHANGELOG_URL}}" role="button">Changelog</a>
+          </div>
+        </div>
+
+        <aside class="col-md-4">
+          <div class="meta">
+            <h5>Release metadata</h5>
+            <p class="small-label"><strong>Version:</strong> {{VERSION}}</p>
+            <p class="small-label"><strong>Released:</strong> {{YYYY-MM-DD}}</p>
+
+            <h6 style="margin-top:12px;">Assets</h6>
+            <ul class="asset-list list-unstyled">
+              <li><a href="{{ASSET_1_URL}}">{{ASSET_1_NAME}}</a><div class="small-label">{{ASSET_1_SIZE}}</div></li>
+              <li><a href="{{ASSET_2_URL}}">{{ASSET_2_NAME}}</a><div class="small-label">{{ASSET_2_SIZE}}</div></li>
+            </ul>
+
+            <h6 style="margin-top:12px;">Checksums</h6>
+            <div class="checksum">{{SHA256_CHECKSUM}}</div>
+
+            <h6 style="margin-top:12px;">Compatibility</h6>
+            <ul class="small-label">
+              <li>{{PLATFORM_1}}</li>
+              <li>{{PLATFORM_2}}</li>
+            </ul>
+
+            <h6 style="margin-top:12px;">Migration / Breaking changes</h6>
+            <p class="small-label">{{MIGRATION_NOTES}}</p>
+
+            <h6 style="margin-top:12px;">Contributors</h6>
+            <p class="small-label">{{CONTRIBUTORS}}</p>
+
+            <h6 style="margin-top:12px;">Support</h6>
+            <p class="small-label">{{SUPPORT_CONTACT}}</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- EXAMPLE: Older release -->
+    <section class="release" id="release-v1-2-0" data-version="1.2.0" data-date="2025-07-02" data-status="stable">
+      <div class="row">
+        <div class="col-md-8">
+          <h2>v1.2.0 <small class="small-label">("Aquila")</small>
+            <span class="status"><span class="badge-status badge-stable">Stable</span></span>
+          </h2>
+          <p>Performance optimizations and several UI improvements to the dashboard.</p>
+
+          <div class="row" style="margin-top:18px;">
+            <div class="col-sm-6">
+              <h4>What's New</h4>
+              <ul>
+                <li>Redesigned dashboard widgets for quicker insights.</li>
+                <li>New product import wizard (.csv).</li>
+              </ul>
+            </div>
+            <div class="col-sm-6">
+              <h4>Bug fixes</h4>
+              <ul>
+                <li>Fixed issue with tax calculation on returns.</li>
+                <li>Fixed UI overflow on small tablets.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div style="margin-top:18px;">
+            <h4>Upgrade Notes</h4>
+            <ul>
+              <li>No database schema changes — direct upgrade.</li>
+              <li>If using the older reporting plugin, update to plugin v2.0.</li>
+            </ul>
+          </div>
+        </div>
+
+        <aside class="col-md-4">
+          <div class="meta">
+            <h5>Release metadata</h5>
+            <p class="small-label"><strong>Version:</strong> 1.2.0</p>
+            <p class="small-label"><strong>Released:</strong> 2025-07-02</p>
+
+            <h6 style="margin-top:12px;">Assets</h6>
+            <ul class="asset-list list-unstyled">
+              <li><a href="downloads/shuwaki-worxpace-1.2.0-windows.exe">shuwaki-worxpace-1.2.0-windows.exe</a><div class="small-label">40 MB</div></li>
+              <li><a href="downloads/shuwaki-worxpace-1.2.0-android.apk">shuwaki-worxpace-1.2.0-android.apk</a><div class="small-label">14 MB</div></li>
+            </ul>
+
+            <h6 style="margin-top:12px;">Checksums</h6>
+            <div class="checksum">SHA256: d1a2...f7c8 (example)</div>
+
+            <h6 style="margin-top:12px;">Compatibility</h6>
+            <ul class="small-label">
+              <li>Windows 8.1+ / Linux</li>
+              <li>Android 7.0+</li>
+            </ul>
+
+            <h6 style="margin-top:12px;">Support</h6>
+            <p class="small-label">support@shuwaki.io</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="social text-center">
+        <a href="https://shuwaki.github.io/"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.facebook.com/ibrahimabdullahi.shuwaki/"><i class="fa fa-facebook"></i></a>
+        <a href="https://shuwaki.github.io/"><i class="fa fa-dribbble"></i></a>
+        <a href="https://shuwaki.github.io/"><i class="fa fa-flickr"></i></a>
+        <a href="https://github.com/shuwaki/"><i class="fa fa-github"></i></a>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </footer>
+
+  <section class="copyright">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 text-center"> Copyright 2025 | All Rights Reserved <a href="https://shuwaki.github.io/">Ibrahim Shuwaki</a> </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/modernizr-latest.js"></script>
+  <script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="js/custom.js" type="text/javascript"></script>
+</body>
+</html>
