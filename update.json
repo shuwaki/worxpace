@@ -1,6 +1,6 @@
 {
-  "version": "2.6.54.0",
-  "url": "https://github.com/shuwaki/worxpace/releases/download/v2.6.54/Worxpace_2.6_Installer.msi",
-  "changelog": "https://github.com/shuwaki/worxpace/releases/tag/v2.6.54",
+  "version": "2.6.55",
+  "url": "https://shuwaki.github.io/worxpace/downloads/shuwaki-worxpace-2.6.55-windows.msi",
+  "changelog": "https://shuwaki.github.io/worxpace/releases.html",
   "mandatory": false
 }
