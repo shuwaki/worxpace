@@ -3,7 +3,7 @@ PSEUDOCODE / PLAN (detailed):
 
 1. Page wrapper
    - Standard HTML5 document with head copied from existing site to maintain styles/scripts.
-   - Title: "Releases - Shuwaki Worxpace®"
+   - Title: "Releases - Shuwaki Worxpaceï¿½"
 
 2. Navigation
    - Reuse the existing site nav markup so the new page integrates with the site.
@@ -52,7 +52,7 @@ END PSEUDOCODE
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>Releases - Shuwaki Worxpace&reg;</title>
   <meta name="description" content="Release notes, downloads and changelogs for Shuwaki Worxpace.">
-  <meta name="author" content="Shuwaki Ibra">
+  <meta name="author" content="Shuwaki Ibrahim">
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen" />
   <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
@@ -93,31 +93,32 @@ END PSEUDOCODE
     </div>
 
     <!-- LATEST RELEASE HIGHLIGHT -->
-    <section class="release" id="release-latest" data-version="1.3.0" data-date="2025-10-15" data-status="stable">
+    <section class="release" id="release-latest" data-version="2.6.55" data-date="2026-11-02" data-status="stable">
       <div class="row">
         <div class="col-md-8">
-          <h2>v1.3.0 <small class="small-label">("Zephyr")</small>
+          <h2>v2.6.55 <small class="small-label">("Solid")</small>
             <span class="status">
               <span class="badge-status badge-stable" aria-hidden="true">Stable</span>
             </span>
           </h2>
-          <p class="template-note">Short summary: A small description of the release, its focus and target users.</p>
-          <p>Shuwaki Worxpace v1.3.0 focuses on performance improvements, expanded reporting and a new offline sync engine.</p>
+          <p class="template-note">Short summary: Restored more features that have been broken since 2.6.12.</p>
+          <p>Shuwaki Worxpace v2.6.55 focuses on stability improvements, while restoring broken functionality.</p>
 
           <div class="row" style="margin-top:18px;">
             <div class="col-sm-6">
               <h4>What's New</h4>
               <ul>
-                <li>New offline sync engine: faster background sync and conflict resolution.</li>
-                <li>Expanded analytics with CSV export for custom reports.</li>
-                <li>Improved POS throughput under high-load scenarios.</li>
+                <li>Included Automatic update support</li>
+                <li>Enabled viewing and printing of inventory by shelf.</li>
               </ul>
             </div>
             <div class="col-sm-6">
               <h4>Bug fixes</h4>
               <ul>
-                <li>Fixed rounding bug on multi-currency invoices.</li>
-                <li>Resolved crash when opening customer history with >10k transactions.</li>
+                <li>Fixed Inventory history not loading.</li>
+                <li>Resolved app crashing when login attempt throws </li>
+                <li>Fixed some summary figures in admin dashboard not showing correct totals</li>
+                <li>Fixed cashier summary not showing correct totals.</li>
               </ul>
             </div>
           </div>
@@ -125,13 +126,13 @@ END PSEUDOCODE
           <div style="margin-top:18px;">
             <h4>Upgrade Notes</h4>
             <ul>
-              <li>Backup your database before upgrading from versions &lt; 1.2.0.</li>
-              <li>If you use custom plugins, verify compatibility with the new sync API.</li>
+              <li>This update is not compatible with versions &lt; 2.6.50.</li>
+              <li>Henceforth, app will attempt to check for update whenever it starts, you may see prompts.</li>
             </ul>
           </div>
 
           <div style="margin-top:18px;">
-            <a class="btn btn-primary" href="#download-v1-3-0" role="button">Download</a>
+            <a class="btn btn-primary" href="downloads/shuwaki-worxpace-2.6.55-windows.msi" role="button">Download</a>
             <a class="btn btn-default" href="#changelog-v1-3-0" role="button">Changelog</a>
           </div>
         </div>
@@ -139,23 +140,15 @@ END PSEUDOCODE
         <aside class="col-md-4">
           <div class="meta">
             <h5>Release metadata</h5>
-            <p class="small-label"><strong>Version:</strong> 1.3.0</p>
-            <p class="small-label"><strong>Released:</strong> 2025-10-15</p>
+            <p class="small-label"><strong>Version:</strong> 2.6.55</p>
+            <p class="small-label"><strong>Released:</strong> 2025-11-02</p>
             <p class="small-label"><strong>Support:</strong> LTS (12 months)</p>
 
             <h6 style="margin-top:12px;">Assets</h6>
             <ul class="asset-list list-unstyled">
               <li>
-                <a href="downloads/shuwaki-worxpace-1.3.0-windows.exe" download>shuwaki-worxpace-1.3.0-windows.exe</a>
-                <div class="small-label">Windows installer — 42 MB</div>
-              </li>
-              <li>
-                <a href="downloads/shuwaki-worxpace-1.3.0-linux.tar.gz" download>shuwaki-worxpace-1.3.0-linux.tar.gz</a>
-                <div class="small-label">Linux tarball — 38 MB</div>
-              </li>
-              <li>
-                <a href="downloads/shuwaki-worxpace-1.3.0-android.apk" download>shuwaki-worxpace-1.3.0-android.apk</a>
-                <div class="small-label">Android APK — 15 MB</div>
+                <a href="downloads/shuwaki-worxpace-2.6.55-windows.msi" download>shuwaki-worxpace-1.3.0-windows.exe</a>
+                <div class="small-label">Windows installer ï¿½ 22 MB</div>
               </li>
             </ul>
 
@@ -164,23 +157,21 @@ END PSEUDOCODE
 
             <h6 style="margin-top:12px;">Compatibility</h6>
             <ul class="small-label">
-              <li>Windows 10 or later</li>
-              <li>Ubuntu 18.04+ / Debian 10+</li>
-              <li>Android 8.0 or later (APK)</li>
+              <li>Windows 7 or later</li>
             </ul>
 
             <h6 style="margin-top:12px;">Contributors</h6>
-            <p class="small-label">Ibrahim Shuwaki, Team Shuwaki</p>
+            <p class="small-label">Pharm Ibrahim Shuwaki</p>
 
             <h6 style="margin-top:12px;">Contact & Support</h6>
-            <p class="small-label">support@shuwaki.io — For enterprise support request include logs and DB version.</p>
+            <p class="small-label">shuwaki10@gmail.com ï¿½ For enterprise support request include logs and DB version.</p>
           </div>
         </aside>
       </div>
     </section>
 
     <!-- TEMPLATE SECTION - copy this block for every release and update fields -->
-    <section class="release" id="release-template" data-version="{{VERSION}}" data-date="{{YYYY-MM-DD}}" data-status="{{stable|beta|rc}}">
+    <!-- <section class="release" id="release-template" data-version="{{VERSION}}" data-date="{{YYYY-MM-DD}}" data-status="{{stable|beta|rc}}">
       <div class="row">
         <div class="col-md-8">
           <h2>v{{VERSION}} <small class="small-label">("{{CODENAME}}")</small>
@@ -255,7 +246,7 @@ END PSEUDOCODE
           </div>
         </aside>
       </div>
-    </section>
+    </section> -->
 
     <!-- EXAMPLE: Older release -->
     <section class="release" id="release-v1-2-0" data-version="1.2.0" data-date="2025-07-02" data-status="stable">
@@ -286,7 +277,7 @@ END PSEUDOCODE
           <div style="margin-top:18px;">
             <h4>Upgrade Notes</h4>
             <ul>
-              <li>No database schema changes — direct upgrade.</li>
+              <li>No database schema changes ï¿½ direct upgrade.</li>
               <li>If using the older reporting plugin, update to plugin v2.0.</li>
             </ul>
           </div>
