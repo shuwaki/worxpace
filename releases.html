@@ -93,32 +93,29 @@ END PSEUDOCODE
     </div>
 
     <!-- LATEST RELEASE HIGHLIGHT -->
-    <section class="release" id="release-latest" data-version="2.6.55" data-date="2026-11-02" data-status="stable">
+    <section class="release" id="release-latest" data-version="2.6.56" data-date="2026-11-03" data-status="stable">
       <div class="row">
         <div class="col-md-8">
-          <h2>v2.6.55 <small class="small-label">("Solid")</small>
+          <h2>v2.6.56 <small class="small-label">("Solid")</small>
             <span class="status">
               <span class="badge-status badge-stable" aria-hidden="true">Stable</span>
             </span>
           </h2>
-          <p class="template-note">Short summary: Restored more features that have been broken since 2.6.12.</p>
-          <p>Shuwaki Worxpace v2.6.55 focuses on stability improvements, while restoring broken functionality.</p>
+          <p class="template-note">Auto update feature shows a message box when no update is found since 2.6.55. This 
+            feature has been removed. It now stays silent when no update is found.</p>
 
           <div class="row" style="margin-top:18px;">
             <div class="col-sm-6">
               <h4>What's New</h4>
               <ul>
-                <li>Included Automatic update support</li>
-                <li>Enabled viewing and printing of inventory by shelf.</li>
+                <li>Auto update feature stays silent when no update is found</li>
+                <li>Users now stay logged until 23:59:59 of the day they log in</li>
               </ul>
             </div>
             <div class="col-sm-6">
               <h4>Bug fixes</h4>
               <ul>
-                <li>Fixed Inventory history not loading.</li>
-                <li>Resolved app crashing when login attempt throws </li>
-                <li>Fixed some summary figures in admin dashboard not showing correct totals</li>
-                <li>Fixed cashier summary not showing correct totals.</li>
+                <li>No bug fixes.</li>
               </ul>
             </div>
           </div>
@@ -127,12 +124,11 @@ END PSEUDOCODE
             <h4>Upgrade Notes</h4>
             <ul>
               <li>This update is not compatible with versions &lt; 2.6.50.</li>
-              <li>Henceforth, app will attempt to check for update whenever it starts, you may see prompts.</li>
             </ul>
           </div>
 
           <div style="margin-top:18px;">
-            <a class="btn btn-primary" href="downloads/shuwaki-worxpace-2.6.55-windows.msi" role="button">Download</a>
+            <a class="btn btn-primary" href="downloads/shuwaki-worxpace-2.6.56-windows.msi" role="button">Download</a>
             <a class="btn btn-default" href="#changelog-v1-3-0" role="button">Changelog</a>
           </div>
         </div>
@@ -140,14 +136,14 @@ END PSEUDOCODE
         <aside class="col-md-4">
           <div class="meta">
             <h5>Release metadata</h5>
-            <p class="small-label"><strong>Version:</strong> 2.6.55</p>
-            <p class="small-label"><strong>Released:</strong> 2025-11-02</p>
+            <p class="small-label"><strong>Version:</strong> 2.6.56</p>
+            <p class="small-label"><strong>Released:</strong> 2025-11-03</p>
             <p class="small-label"><strong>Support:</strong> LTS (12 months)</p>
 
             <h6 style="margin-top:12px;">Assets</h6>
             <ul class="asset-list list-unstyled">
               <li>
-                <a href="downloads/shuwaki-worxpace-2.6.55-windows.msi" download>shuwaki-worxpace-2.6.55-windows.msi</a>
+                <a href="downloads/shuwaki-worxpace-2.6.56-windows.msi" download>shuwaki-worxpace-2.6.56-windows.msi</a>
                 <div class="small-label">Windows installer � 22 MB</div>
               </li>
             </ul>
@@ -248,28 +244,33 @@ END PSEUDOCODE
       </div>
     </section> -->
 
-    <!-- EXAMPLE: Older release -->
-    <section class="release" id="release-v1-2-0" data-version="1.2.0" data-date="2025-07-02" data-status="stable">
+    <!-- Older releases -->
+    <section class="release" id="release-latest" data-version="2.6.55" data-date="2026-11-02" data-status="stable">
       <div class="row">
         <div class="col-md-8">
-          <h2>v1.2.0 <small class="small-label">("Aquila")</small>
-            <span class="status"><span class="badge-status badge-stable">Stable</span></span>
+          <h2>v2.6.55 <small class="small-label">("Solid")</small>
+            <span class="status">
+              <span class="badge-status badge-stable" aria-hidden="true">Stable</span>
+            </span>
           </h2>
-          <p>Performance optimizations and several UI improvements to the dashboard.</p>
+          <p class="template-note">Short summary: Restored more features that have been broken since 2.6.12.</p>
+          <p>Shuwaki Worxpace v2.6.55 focuses on stability improvements, while restoring broken functionality.</p>
 
           <div class="row" style="margin-top:18px;">
             <div class="col-sm-6">
               <h4>What's New</h4>
               <ul>
-                <li>Redesigned dashboard widgets for quicker insights.</li>
-                <li>New product import wizard (.csv).</li>
+                <li>Included Automatic update support</li>
+                <li>Enabled viewing and printing of inventory by shelf.</li>
               </ul>
             </div>
             <div class="col-sm-6">
               <h4>Bug fixes</h4>
               <ul>
-                <li>Fixed issue with tax calculation on returns.</li>
-                <li>Fixed UI overflow on small tablets.</li>
+                <li>Fixed Inventory history not loading.</li>
+                <li>Resolved app crashing when login attempt throws </li>
+                <li>Fixed some summary figures in admin dashboard not showing correct totals</li>
+                <li>Fixed cashier summary not showing correct totals.</li>
               </ul>
             </div>
           </div>
@@ -277,35 +278,45 @@ END PSEUDOCODE
           <div style="margin-top:18px;">
             <h4>Upgrade Notes</h4>
             <ul>
-              <li>No database schema changes � direct upgrade.</li>
-              <li>If using the older reporting plugin, update to plugin v2.0.</li>
+              <li>This update is not compatible with versions &lt; 2.6.50.</li>
+              <li>Henceforth, app will attempt to check for update whenever it starts, you may see prompts.</li>
             </ul>
+          </div>
+
+          <div style="margin-top:18px;">
+            <a class="btn btn-primary" href="downloads/shuwaki-worxpace-2.6.55-windows.msi" role="button">Download</a>
+            <a class="btn btn-default" href="#changelog-v1-3-0" role="button">Changelog</a>
           </div>
         </div>
 
         <aside class="col-md-4">
           <div class="meta">
             <h5>Release metadata</h5>
-            <p class="small-label"><strong>Version:</strong> 1.2.0</p>
-            <p class="small-label"><strong>Released:</strong> 2025-07-02</p>
+            <p class="small-label"><strong>Version:</strong> 2.6.55</p>
+            <p class="small-label"><strong>Released:</strong> 2025-11-02</p>
+            <p class="small-label"><strong>Support:</strong> LTS (12 months)</p>
 
             <h6 style="margin-top:12px;">Assets</h6>
             <ul class="asset-list list-unstyled">
-              <li><a href="downloads/shuwaki-worxpace-1.2.0-windows.exe">shuwaki-worxpace-1.2.0-windows.exe</a><div class="small-label">40 MB</div></li>
-              <li><a href="downloads/shuwaki-worxpace-1.2.0-android.apk">shuwaki-worxpace-1.2.0-android.apk</a><div class="small-label">14 MB</div></li>
+              <li>
+                <a href="downloads/shuwaki-worxpace-2.6.55-windows.msi" download>shuwaki-worxpace-2.6.55-windows.msi</a>
+                <div class="small-label">Windows installer � 22 MB</div>
+              </li>
             </ul>
 
             <h6 style="margin-top:12px;">Checksums</h6>
-            <div class="checksum">SHA256: d1a2...f7c8 (example)</div>
+            <div class="checksum">SHA256: 3f5c...a9d2 (example)</div>
 
             <h6 style="margin-top:12px;">Compatibility</h6>
             <ul class="small-label">
-              <li>Windows 8.1+ / Linux</li>
-              <li>Android 7.0+</li>
+              <li>Windows 7 or later</li>
             </ul>
 
-            <h6 style="margin-top:12px;">Support</h6>
-            <p class="small-label">support@shuwaki.io</p>
+            <h6 style="margin-top:12px;">Contributors</h6>
+            <p class="small-label">Pharm Ibrahim Shuwaki</p>
+
+            <h6 style="margin-top:12px;">Contact & Support</h6>
+            <p class="small-label">shuwaki10@gmail.com � For enterprise support request include logs and DB version.</p>
           </div>
         </aside>
       </div>
