@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <item>
-  <version>2.6.60</version>
-  <url>https://shuwaki.github.io/worxpace/downloads/shuwaki-worxpace-2.6.60-windows.msi</url>
+  <version>2.6.61</version>
+  <url>https://shuwaki.github.io/worxpace/downloads/shuwaki-worxpace-2.6.61-windows.msi</url>
   <changelog>https://shuwaki.github.io/worxpace/releases.html</changelog>
   <mandatory>false</mandatory>
 </item>
