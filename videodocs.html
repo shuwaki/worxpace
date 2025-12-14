@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Worxpace Video Documentation</title>
+
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card: #111827;
+            --text: #e5e7eb;
+            --muted: #9ca3af;
+            --accent: #38bdf8;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        header {
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid #1f2937;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.4rem;
+        }
+
+        header p {
+            margin: .3rem 0 0;
+            color: var(--muted);
+            font-size: .9rem;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #1f2937;
+        }
+
+        video {
+            width: 100%;
+            display: block;
+            background: black;
+        }
+
+        .content {
+            padding: 1rem;
+        }
+
+        .content h3 {
+            margin: 0 0 .4rem;
+            font-size: 1rem;
+        }
+
+        .content p {
+            margin: 0;
+            font-size: .85rem;
+            color: var(--muted);
+            line-height: 1.4;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            font-size: .8rem;
+            color: var(--muted);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Worxpace Video Docs</h1>
+    <p>Short guides explaining features and workflows</p>
+</header>
+
+<main>
+    <section class="grid">
+
+        <!-- Card 1 -->
+        <article class="card">
+            <video controls preload="metadata">
+                <source src="videos/VAT.mp4" type="video/mp4">
+            </video>
+            <div class="content">
+                <h3>Value Added Tax</h3>
+                <p>How apply and charge VAT.</p>
+            </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card">
+            <video controls preload="metadata">
+                <source src="videos/sales.mp4" type="video/mp4">
+            </video>
+            <div class="content">
+                <h3>Processing a Sale</h3>
+                <p>Step-by-step walkthrough of the POS flow.</p>
+            </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card">
+            <video controls preload="metadata">
+                <source src="videos/sync.mp4" type="video/mp4">
+            </video>
+            <div class="content">
+                <h3>Offline Sync</h3>
+                <p>How background sync works when internet is restored.</p>
+            </div>
+        </article>
+
+    </section>
+</main>
+
+<footer>
+    © 2025 — Internal documentation
+</footer>
+
+</body>
+</html>
