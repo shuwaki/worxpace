@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <item>
-  <version>2.6.63</version>
-  <url>https://shuwaki.github.io/worxpace/downloads/shuwaki-worxpace-2.6.63-windows.msi</url>
+  <version>2.7.0</version>
+  <url>https://shuwaki.github.io/worxpace/downloads/WorxpaceOffline-Setup-2.7.0.exe</url>
   <changelog>https://shuwaki.github.io/worxpace/releases.html</changelog>
   <mandatory>false</mandatory>
+  <args>/SILENT /NORESTART</args>
+  <checksum algorithm="SHA256">F8FDB32441F6DFBE44173E17889FFE1C0FD4EA786563B89604819322F4A6DB4F</checksum>
 </item>
