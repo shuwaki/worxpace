@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <item>
-  <version>2.7.0</version>
-  <url>https://shuwaki.github.io/worxpace/downloads/WorxpaceOffline-Setup-2.7.0.exe</url>
-  <changelog>https://shuwaki.github.io/worxpace/releases.html</changelog>
+  <version>2.7.5</version>
+  <url>https://shuwaki.github.io/worxpace/downloads/WorxpaceOffline-Setup-2.7.5-runtime-required.exe</url>
+  <changelog>https://shuwakiworxpace.com/releases.html</changelog>
   <mandatory>false</mandatory>
   <args>/SILENT /NORESTART</args>
-  <checksum algorithm="SHA256">F8FDB32441F6DFBE44173E17889FFE1C0FD4EA786563B89604819322F4A6DB4F</checksum>
+  <checksum algorithm="SHA256">367350BA8B9553B47D506C0B28FF7C05BF2B9AAF5F41434F192B52AF4D85C033</checksum>
 </item>
